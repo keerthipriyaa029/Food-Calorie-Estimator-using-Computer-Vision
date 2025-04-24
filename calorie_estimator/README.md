@@ -32,12 +32,7 @@ food-calorie-estimator/
 ├── config.py              # API key configuration
 ├── .env                   # API key storage (not committed to version control)
 ├── requirements.txt       # Dependencies
-├── runtime.txt            # Python version specification
-├── setup.py               # Package setup and metadata
-├── install.sh             # Installation script for Linux/Mac
-├── install.bat            # Installation script for Windows
-└── model/                 # Stores downloaded model
-    └── food_model.pth     # Fine-tuned model (if available)
+
 ```
 
 ## Installation
@@ -156,10 +151,6 @@ This project uses packages that are compatible with Python 3.12:
 - Streamlit 1.30.0+
 - All other dependencies specified in requirements.txt
 
-### Common Issues
-- **Camera access**: On macOS, you may need to grant camera permissions explicitly
-- **PyTorch installation**: For CUDA support, refer to the [PyTorch installation guide](https://pytorch.org/get-started/locally/)
-- **Package installation issues**: Try `pip install --upgrade pip` and `pip install --only-binary=:all: package_name`
 
 ## Limitations
 
@@ -168,22 +159,3 @@ This project uses packages that are compatible with Python 3.12:
 - Mixed dishes may be identified by their most prominent ingredient
 - Webcam functionality requires proper camera permissions and may not work in all environments
 
-## Future Improvements
-
-- Fine-tune model on larger food datasets
-- Add portion size estimation using depth sensing or reference objects
-- Support for mixed dishes and multiple food items in one image
-- Add historical tracking of food consumption
-- Mobile app deployment
-- Continuous video analysis for real-time calorie estimation
-
-## License
-
-MIT License
-
-## Acknowledgments
-
-- Food-101 dataset
-- PyTorch and torchvision
-- Streamlit for the web interface
-- Calorie Ninja API for nutritional data 
